@@ -1,0 +1,19 @@
+<div class="container">
+    
+    <div *ngIf="!esDetalleProd">
+        <h1>Lista de Productos</h1>
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" *ngFor="let producto of lProducto">
+                <app-listado (onVerDetalle)="verDetalleProd($event)"  [producto]= "producto"></app-listado>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container"  *ngIf="esDetalleProd">
+        <h3>Detalle del producto</h3>
+        <app-info [prod]="prod" ></app-info>
+    </div>
+</div>
