@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from '../product.model';
 
 @Component({
@@ -11,14 +12,22 @@ export class ListadoComponent implements OnInit {
  @Input() producto: Producto;
  @Output() onVerDetalle: EventEmitter<any> = new EventEmitter();
  
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {  
   }
 
-  verDetalle() {
+  verDetalle(){
     console.log('verDetalle click');
     this.onVerDetalle.emit(this.producto.id);
+  }
+
+  agregarProdCarro(){
+
+    //console.log('producto -> ', this.producto);
+    
+    this.router.navigate(['/carrito']);
+
   }
 
 }

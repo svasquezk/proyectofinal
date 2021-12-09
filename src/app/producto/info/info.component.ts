@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Producto } from '../product.model';
 
 @Component({
@@ -9,10 +9,16 @@ import { Producto } from '../product.model';
 export class InfoComponent implements OnInit {
 
   @Input() prod: Producto;
+  @Output() onVolver: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
+
+
+  volverListadoProd(){
+    this.onVolver.emit(true);
+  } 
 
 }

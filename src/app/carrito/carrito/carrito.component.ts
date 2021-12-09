@@ -10,6 +10,7 @@ export class CarritoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('CARRITO');
   }
 
 }
