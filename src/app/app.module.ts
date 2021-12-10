@@ -9,6 +9,8 @@ import { ListadoComponent } from './producto/listado/listado.component';
 import { InfoComponent } from './producto/info/info.component';
 import { CarritoComponent } from './carrito/carrito/carrito.component';
 import { ProductoPagComponent } from './producto/producto-pag/producto-pag.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { IngresoPagComponent } from './ingreso/ingreso-pag/ingreso-pag.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ProductoPagComponent } from './producto/producto-pag/producto-pag.compo
     ListadoComponent,
     InfoComponent,
     CarritoComponent,
-    ProductoPagComponent
+    ProductoPagComponent,
+    IngresoPagComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
