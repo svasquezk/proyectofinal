@@ -5,13 +5,15 @@ import { CarritoComponent } from './carrito/carrito/carrito.component';
 import { IngresoPagComponent } from './ingreso/ingreso-pag/ingreso-pag.component';
 import { LoginComponent } from './ingreso/login/login.component';
 import { RegistroComponent } from './ingreso/registro/registro.component';
-import { ProductoPagComponent } from './producto/producto-pag/producto-pag.component';
+import { PeliculaComponent } from './producto/pelicula/pelicula.component';
+import { PeliculasComponent } from './producto/peliculas/peliculas.component';
 
 export const routes: Routes = [
   { path: 'login', component: IngresoPagComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'carrito', component: CarritoComponent },
-  { path: 'producto', component: ProductoPagComponent },
+  { path: 'peliculas', component: PeliculasComponent },
+  { path: 'pelicula/:id', component: PeliculaComponent },
   { path: '', pathMatch: 'full', redirectTo: 'login' }
 ];
 

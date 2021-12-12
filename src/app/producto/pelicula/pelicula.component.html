@@ -1,0 +1,12 @@
+<div class="card mb-3">
+    <img [src]='peli.image' style="width: 50%;" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{ peli.title }}</h5>
+      <p class="card-text">{{ peli.description }}</p>
+      <p class="card-text"><small class="text-muted">Precio ${{peli.price}} </small></p>
+    </div>
+    <div class="m-2">
+        <button type="button" class="btn btn-primary btn-lg m-2" (click)="volverListadoProd()" >Volver a listado</button>
+        <button type="button" class="btn btn-secondary btn-lg m-2 ">Agregar al carrito</button>
+    </div>
+  </div>

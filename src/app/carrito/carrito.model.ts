@@ -1,7 +1,8 @@
-export interface Producto {
+export interface Carrito {
     id: number;
     title: string;
-    image: string;
     price: number;
     description: string;
+    image: string;
+    cantidad: number;
 }

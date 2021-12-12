@@ -1,0 +1,15 @@
+<div class="card h-100">
+    <img [src]='peli.image' class="card-img-top rounded float-start" width="100%" height="100%" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ peli.title }}</h5>
+      <p class="card-text">{{peli.description}}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Precio ${{peli.price}}</small>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end p-2">
+      <button class="btn btn-info" (click)="addCarrito()" routerLinkActive="active"  >Agregar al carrito</button>
+      <a mdbBtn color="success" class="waves-light" mdbWavesEffect></a>
+      <button class="btn btn-primary me-md-2" (click)="verDetalle()" type="button">Ver Detalle</button>
+    </div>
+  </div>
