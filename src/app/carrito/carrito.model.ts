@@ -5,4 +5,5 @@ export interface Carrito {
     description: string;
     image: string;
     cantidad: number;
+    usuario: string;
 }

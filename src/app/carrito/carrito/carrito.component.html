@@ -6,29 +6,17 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Pelicula</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let c of this.lCarrito">
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+        <td>{{c.title}}</td>
+        <td>{{c.cantidad}}</td>
+        <td>{{c.precio}}</td>
       </tr>
     </tbody>
   </table>

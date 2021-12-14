@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastService } from 'ng-uikit-pro-standard';
 import { Cliente } from '../cliente.model';
 
 @Component({
@@ -20,27 +21,24 @@ export class RegistroComponent implements OnInit {
 
   cliente: Cliente[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private toastrService: ToastService) { }
 
   ngOnInit() {
   }
 
   crearRegistro() {
-    console.log('--->', this.frmRegistro.valid);
     if(this.frmRegistro.valid) {
       let cli: Cliente;
       cli = {
         nombreUsuario: this.frmRegistro.get('nomUsuario').value,
         correo: this.frmRegistro.get('correo').value,
         password: this.frmRegistro.get('password').value
-      }
-      // cli.nombreUsuario = this.frmRegistro.get('nomUsuario').value;
-      // cli.correo = this.frmRegistro.get('correo').value;
-      // cli.password = this.frmRegistro.get('password').value;
+      } 
+      localStorage.setItem('cliente', JSON.stringify(cli));
 
-      this.cliente.push(cli);
-      this.clienteAdd.emit('dadasjhsiaj');
-      // this.router.navigate(['/login'])
+      // Mensaje
+      const options = { opacity: 1 };
+      this.toastrService.success('Pelicula agregada!', 'Se agregó al carrito!', options);
     }
 
   }

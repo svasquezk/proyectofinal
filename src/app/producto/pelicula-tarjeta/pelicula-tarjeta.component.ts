@@ -31,7 +31,8 @@ export class PeliculaTarjetaComponent implements OnInit {
   }
 
   addCarrito() {
-    this.peliServ.addCarrito(this.peli);
+    debugger
+    this.peliServ.addCarrito(this.peli, 'test');
     const options = { opacity: 1 };
     this.toastrService.success('Pelicula agregada!', 'Se agregó al carrito!', options);
   }

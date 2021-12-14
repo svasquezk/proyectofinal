@@ -7,7 +7,6 @@ import { LoginComponent } from './ingreso/login/login.component';
 import { RegistroComponent } from './ingreso/registro/registro.component';
 import { CarritoComponent } from './carrito/carrito/carrito.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { IngresoPagComponent } from './ingreso/ingreso-pag/ingreso-pag.component';
 import { PeliculaTarjetaComponent } from './producto/pelicula-tarjeta/pelicula-tarjeta.component';
 import { PeliculasComponent } from './producto/peliculas/peliculas.component';
 import { PeliculaComponent } from './producto/pelicula/pelicula.component';
@@ -21,7 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     RegistroComponent,
     CarritoComponent,
-    IngresoPagComponent,
     PeliculaTarjetaComponent,
     PeliculasComponent,
     PeliculaComponent

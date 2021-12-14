@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
+import { Carrito } from '../carrito.model';
 
 @Component({
   selector: 'app-carrito',
@@ -8,6 +9,8 @@ import { ProductoService } from '../../services/producto.service';
 })
 export class CarritoComponent implements OnInit {
 
+  lCarrito: Carrito[] = [];
+
   constructor(private peliService: ProductoService) { }
 
   ngOnInit() {
@@ -15,8 +18,8 @@ export class CarritoComponent implements OnInit {
   }
 
   getlCarrito() {
-    const lCarrito = this.peliService.getCarrito();
-    console.log('---> ', lCarrito);
+    this.lCarrito = this.peliService.getCarrito();
+    console.log('---> ', this.lCarrito);
   }
 
 }

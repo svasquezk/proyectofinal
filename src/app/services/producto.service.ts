@@ -52,7 +52,7 @@ export class ProductoService {
     }
   ]
 
-  lCarrito: Carrito[] = []
+  lCarrito: Carrito[] = [];
   constructor() { }
 
   getPeliculas():Pelicula[]{ 
@@ -65,19 +65,21 @@ export class ProductoService {
 
 
   // Agregar pelicula al carrito
-  addCarrito(peli: Pelicula){
-
-    console.log('--> ', peli);
+  addCarrito(peli: Pelicula, usuario: string){
     let carrito: Carrito = {
       cantidad:1,
       id:peli.id,
       image: peli.image,
       description: peli.description,
       price: peli.price,
-      title: peli.title
+      title: peli.title,
+      usuario
     }
 
+    localStorage.setItem('carrito', JSON.stringify(carrito));
     this.lCarrito.push(carrito);
+    debugger
+    console.log(this.lCarrito);
   }
 
 
@@ -88,6 +90,11 @@ export class ProductoService {
 
   //Obtiene lista de peliculas en el carrito
   getCarrito():Carrito[]{
+    debugger
+    
+    this.lCarrito.push(JSON.parse(localStorage.getItem('carrito')));
+    localStorage.removeItem('carrito');
+
     return this.lCarrito;
   }
 

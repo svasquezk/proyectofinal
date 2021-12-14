@@ -19,7 +19,10 @@
                             <input type="text" name="correo" id="correo" class="form-control" formControlName="correo">
                         </div>
                         <div class="form-group">
-                            <input type="button"   class="btn btn-info btn-md mt-2" (click)="crearRegistro()" value="Registrar">
+                            <input type="button"  class="btn btn-info btn-md mt-2" (click)="crearRegistro()" value="Registrar">
+                        </div> 
+                        <div class="form-group">
+                            <input type="button"  class="btn btn-info btn-md mt-2 mr-2"  value="Volver" [routerLink]="['/login']" routerLinkActive="router-link-active"  >
                         </div> 
                     </form>
                 </div>
