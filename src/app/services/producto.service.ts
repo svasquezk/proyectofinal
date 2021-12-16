@@ -75,11 +75,10 @@ export class ProductoService {
       title: peli.title,
       usuario
     }
-
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+  
     this.lCarrito.push(carrito);
-    debugger
-    console.log(this.lCarrito);
+
+    localStorage.setItem('carrito', JSON.stringify(this.lCarrito));
   }
 
 
@@ -89,12 +88,8 @@ export class ProductoService {
   }
 
   //Obtiene lista de peliculas en el carrito
-  getCarrito():Carrito[]{
-    debugger
-    
+  getCarrito():Carrito[]{   
     this.lCarrito.push(JSON.parse(localStorage.getItem('carrito')));
-    localStorage.removeItem('carrito');
-
     return this.lCarrito;
   }
 

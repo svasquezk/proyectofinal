@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './ingreso/login/login.component';
@@ -12,6 +11,7 @@ import { PeliculasComponent } from './producto/peliculas/peliculas.component';
 import { PeliculaComponent } from './producto/pelicula/pelicula.component';
 import { ToastModule } from 'ng-uikit-pro-standard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CarritoComponent,
     PeliculaTarjetaComponent,
     PeliculasComponent,
-    PeliculaComponent
+    PeliculaComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
